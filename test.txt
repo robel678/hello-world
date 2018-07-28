@@ -1,0 +1,83 @@
+this is a test text file to play around the file
+i am going to add more 
+
+1.run 
+mvn archetype:generate -DgroupId=com.cubic -DartifactId=sample-maven -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+2. create resources forlder inside main and test
+
+3. open eclipse -> file->import ->maven ->maven project .....
+
+the repositary is created in C:\Users\robib\.m2\repository
+to run repository
+mvn clean install
+
+
+maven in command line
+1. mvn clean
+2. mvn compile
+3. mvn test-compile
+4. mvn test
+5. mvn install
+
+maven build life cycle
+prepare resources
+validate
+compile
+test
+package
+integration-test
+verify
+install
+deploy
+
+setting the glassfish
+C:\develop\glassfish-4.0\glassfish4\glassfish\domains\domain1\config\domain
+change ports
+<network-listener name="http-listener-1" port="9080" transport="tcp" thread-pool="http-thread-pool" protocol="http-listener-1"/> -- port="8080"
+
+<network-listener name="http-listener-2" port="9181" transport="tcp" thread-pool="http-thread-pool" protocol="http-listener-2"/> 
+C:\develop\glassfish-4.0\glassfish4\bin>asadmin start-domain
+go to browser and write http://localhost:4848
+click on applications -->select deploy --> upload the war file
+open a new tab and write http://localhost:9080/myweb/
+
+jboss configuration
+C:\develop\jboss-eap-7.0.0\jboss-eap-7.0\standalone\configuration\standalone-full
+change port="${jboss.http.port:8080}"/> to 9090 or some other port
+
+C:\develop\jboss-eap-7.0.0\jboss-eap-7.0\bin - add user and configure adding user on terminal
+
+C:\develop\jboss-eap-7.0.0\jboss-eap-7.0\bin>standalone.bat -c standalone-full.xml
+use contrrol c to stop the service
+
+go to browser and write localhost:9990
+click on deployment -> click Add and upload the war file or copy the war file to C:\develop\jboss-eap-7.0.0\jboss-eap-7.0\standalone\deployments
+open a new tab and write localhost:9090/myweb(project name)
+
+Creating multiple dependencies
+-C:\develop>mvn archetype:generate -DgroupId=com.cubic -DartifactId=inventory -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+-go to C:\develop\inventory and delete src folder
+-open the pom file and change the <packaging> from jar to pom
+-cd inventory
+-C:\develop\inventory>mvn archetype:generate -DgroupId=com.cubic.inv.common -DartifactId=inv-common -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+-C:\develop\inventory>mvn archetype:generate -DgroupId=com.cubic.inv.services -DartifactId=inv-services -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+-C:\develop\inventory>mvn archetype:generate -DgroupId=com.cubic.inv.web -DartifactId=inv-web -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+-mvn clean install
+
+-go to eclipse and import existing maven project
+-open pom.xml from invenory
+
+in Junit test we need to install Emma from the market place inorder to 
+get the coverage of the test which has to be 100%
+
+to create suite right click on the test package ->new ->other->junit suites
+->choose the classes and finish
+
+Rest
+mvn spring-boot:run -Dserver.port=5555 
+
+
+
+
+
