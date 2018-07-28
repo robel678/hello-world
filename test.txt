@@ -2,7 +2,7 @@ this is a test text file to play around the file
 
 
 2. create resources forlder inside main and test
-
+this is a new add
 3. open eclipse -> file->import ->maven ->maven project .....
 
 the repositary is created in C:\Users\robib\.m2\repository
