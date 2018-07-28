@@ -1,8 +1,6 @@
 this is a test text file to play around the file
 i am going to add more 
 
-1.run 
-mvn archetype:generate -DgroupId=com.cubic -DartifactId=sample-maven -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 
 2. create resources forlder inside main and test
 
@@ -12,6 +10,7 @@ the repositary is created in C:\Users\robib\.m2\repository
 to run repository
 mvn clean install
 
+this is the things that i need to add
 
 maven in command line
 1. mvn clean
@@ -22,10 +21,6 @@ maven in command line
 
 maven build life cycle
 prepare resources
-validate
-compile
-test
-package
 integration-test
 verify
 install
