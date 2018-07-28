@@ -1,5 +1,4 @@
 this is a test text file to play around the file
-i am going to add more 
 
 
 2. create resources forlder inside main and test
